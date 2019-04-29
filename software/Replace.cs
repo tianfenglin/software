@@ -43,7 +43,7 @@ namespace software
                 string fileName = ofd.SafeFileName;
                 lab_filename.Text = fileName;
                 dt = null;
-                dt = ExcelHelper.ExcelToDataTable("mysheet", true, filepath);
+                dt = NpoiHelper.ExcelToDataTable("mysheet", true, filepath);
             }
         }
 
@@ -90,7 +90,7 @@ namespace software
             }
             //判断是否存在目录
             TableHelper tableHelper = new TableHelper();
-            DataTable dt = ExcelHelper.ExcelToDataTable("mysheet", true, filepath);
+            DataTable dt = NpoiHelper.ExcelToDataTable("mysheet", true, filepath);
             //dt = tableHelper.ReplaceData(dt, "sfzz");
             //dt = tableHelper.ReplaceData(dt, "sfxr");
             FileHelper fileHelper = new FileHelper();
@@ -108,7 +108,7 @@ namespace software
                 string photo = fileHelper.IsExistFile(name, files, "default.jpg", newname, exportphoto);
                 dt.Rows[i]["photo"] = photo;
             }
-            ExcelHelper.DataTableToExcel(dt, "mysheet", true, exportpath);
+            NpoiHelper.DataTableToExcel(dt, "mysheet", true, exportpath);
             MessageBox.Show("导出成功", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -155,7 +155,7 @@ namespace software
             string path = txt_filepath.Text.Trim();
             string exportpath = txt_exportpath.Text.Trim();
             TableHelper tableHelper = new TableHelper();
-            DataTable dt = ExcelHelper.ExcelToDataTable("mysheet", true, filepath);
+            DataTable dt = NpoiHelper.ExcelToDataTable("mysheet", true, filepath);
             DataTable table = dt.Clone();
             List<string> record = new List<string>();
             for (int i = 0; i < dt.Rows.Count; i++)
@@ -179,7 +179,7 @@ namespace software
 
                 }
             }
-            ExcelHelper.DataTableToExcel(table, "mysheet", true, exportpath);
+            NpoiHelper.DataTableToExcel(table, "mysheet", true, exportpath);
             MessageBox.Show("导出成功", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -242,7 +242,7 @@ namespace software
 
                         }
                     }
-                    ExcelHelper.DataTableToExcel(table, "mysheet", true, exportpath);
+                    NpoiHelper.DataTableToExcel(table, "mysheet", true, exportpath);
                     MessageBox.Show("导出成功", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
@@ -343,7 +343,7 @@ namespace software
         private void Btn_Dddc_Click(object sender, EventArgs e)
         {
             string exportpath = txt_exportpath.Text.Trim();
-            ExcelHelper.DataTableToExcel(dt, "mysheet", true, exportpath);
+            NpoiHelper.DataTableToExcel(dt, "mysheet", true, exportpath);
             MessageBox.Show("导出成功", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }

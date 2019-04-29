@@ -77,7 +77,7 @@ namespace software
             }
             //判断是否存在目录
             TableHelper tableHelper = new TableHelper();
-            DataTable dt = ExcelHelper.ExcelToDataTable("mysheet", true, filepath);
+            DataTable dt = NpoiHelper.ExcelToDataTable("mysheet", true, filepath);
             DataTable table = dt.Clone();
             ValidateHelper validateHelper = new ValidateHelper();
             for (int i = 0; i < dt.Rows.Count; i++)
@@ -97,7 +97,7 @@ namespace software
                     table.Rows.Add(row);
                 }
             }
-            ExcelHelper.DataTableToExcel(table, "mysheet", true, exportpath);
+            NpoiHelper.DataTableToExcel(table, "mysheet", true, exportpath);
             MessageBox.Show("验证完成", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }

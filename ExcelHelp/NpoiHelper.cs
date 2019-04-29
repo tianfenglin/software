@@ -1,17 +1,20 @@
-﻿using System;
+﻿using NPOI.HSSF.UserModel;
+using NPOI.SS.UserModel;
+using NPOI.XSSF.UserModel;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using NPOI.HSSF.UserModel;
-using NPOI.SS.UserModel;
-using NPOI.XSSF.UserModel;
 
 namespace ExcelHelp
 {
-    public class ExcelHelper
+    /// <summary>
+    /// Excel 97-2003格式 较优选择NPOI
+    /// </summary>
+    public static class NpoiHelper
     {
         /// <summary>
         /// 将excel中的数据导入到DataTable中
@@ -156,15 +159,21 @@ namespace ExcelHelp
 
                 int j;
                 int count;
+                ICellStyle style = workbook.CreateCellStyle();
+                style.Alignment = HorizontalAlignment.Center;//左右居中
+                style.BorderBottom = BorderStyle.Thin;//边框样式
+                style.VerticalAlignment = VerticalAlignment.Center;// 上下居中
                 //写入DataTable的列名，写入单元格中
                 if (isColumnWritten)
                 {
+
                     var row = sheet.CreateRow(0);
                     for (j = 0; j < data.Columns.Count; ++j)
                     {
                         row.CreateCell(j).SetCellValue(data.Columns[j].ColumnName);
                     }
                     count = 1;
+
                 }
                 else
                 {

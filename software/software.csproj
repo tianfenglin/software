@@ -11,6 +11,8 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -23,13 +25,11 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -114,6 +114,12 @@
     <Compile Include="BuildObject.Designer.cs">
       <DependentUpon>BuildObject.cs</DependentUpon>
     </Compile>
+    <Compile Include="MakeExcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MakeExcel.Designer.cs">
+      <DependentUpon>MakeExcel.cs</DependentUpon>
+    </Compile>
     <Compile Include="MakeSql.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,6 +169,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BuildObject.resx">
       <DependentUpon>BuildObject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MakeExcel.resx">
+      <DependentUpon>MakeExcel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MakeSql.resx">
       <DependentUpon>MakeSql.cs</DependentUpon>

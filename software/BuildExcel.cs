@@ -63,7 +63,7 @@ namespace software
             }
             List<string> sqllist = new List<string>();
             //获取excel成datatable
-            DataTable dt = ExcelHelper.ExcelToDataTable("mysheet", true, filepath);
+            DataTable dt = NpoiHelper.ExcelToDataTable("mysheet", true, filepath);
             int dt_column_count = dt.Columns.Count;
             int dt_row_count = dt.Rows.Count;
             List<string> columns = new List<string>();//excel中字段列
@@ -161,7 +161,7 @@ namespace software
             }
             List<string> sqllist = new List<string>();
             //获取excel成datatable
-            DataTable dt = ExcelHelper.ExcelToDataTable("mysheet", true, filepath);
+            DataTable dt = NpoiHelper.ExcelToDataTable("mysheet", true, filepath);
             int dt_column_count = dt.Columns.Count;
             int dt_row_count = dt.Rows.Count;
             List<string> columns = new List<string>();//excel中字段列
