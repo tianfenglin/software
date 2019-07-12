@@ -124,7 +124,7 @@ namespace Common
         {
             string name = defaultname;
             //防止文件名中间带有空格
-            List<FileInfo> files_one = files.FindAll(t => t.Name.Replace(" ","").Contains(filename));
+            List<FileInfo> files_one = files.FindAll(t => t.Name.Replace(" ", "").Contains(filename));
             if (files_one.Count == 0)
             {
                 name = defaultname;
@@ -161,6 +161,22 @@ namespace Common
             else
                 Console.WriteLine("两个文件不等");
 
+        }
+
+        /// <summary>
+        /// 更改文件夹下所有文件的后缀名
+        /// </summary>
+        /// <param name="path">文件夹路径</param>
+        /// <param name="suffix">文件后缀</param>
+        public void ReNamePathFileSuffix(string startpath, string endpath, string suffix)
+        {
+            List<FileInfo> fileInfos = GetAllFilesInPath(startpath);
+            for (int i = 0; i < fileInfos.Count; i++)
+            {
+                FileInfo file = fileInfos[i];
+                string name = file.Name.Split('.')[0];
+                fileInfos[i].CopyTo(endpath + "\\" + name + "." + suffix);
+            }
         }
     }
 }

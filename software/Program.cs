@@ -16,7 +16,7 @@ namespace software
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BuildExcel());
+            Application.Run(new MakeImages());
         }
     }
 }
