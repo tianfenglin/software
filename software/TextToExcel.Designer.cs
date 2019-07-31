@@ -148,7 +148,9 @@
             this.Controls.Add(this.txt_filepath);
             this.Controls.Add(this.lab_filepath);
             this.Controls.Add(this.dgv_content);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TextToExcel";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TextToExcel";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_content)).EndInit();
             this.ResumeLayout(false);

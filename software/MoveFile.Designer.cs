@@ -189,7 +189,9 @@
             this.Controls.Add(this.Btn_FirstPath);
             this.Controls.Add(this.Btn_MoveFile);
             this.Controls.Add(this.Btn_EndPath);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MoveFile";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "移动文件";
             this.ResumeLayout(false);
             this.PerformLayout();

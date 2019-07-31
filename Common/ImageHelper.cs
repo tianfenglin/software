@@ -72,7 +72,45 @@ namespace Common
                 string lujing = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "错误信息.txt");
                 File.WriteAllLines(lujing, error);
             }
-          
+
+        }
+
+        public void ChangeImageFormat(string importpath, string outpath, int width, int height, string suffix)
+        {
+            MagickImage image = null;
+            List<FileInfo> list = fileHelper.GetAllFilesInPath(importpath);
+            List<string> error = new List<string>();
+            for (int i = 0; i < list.Count; i++)
+            {
+                FileInfo fileInfo = list[i];
+                try
+                {
+                    image = new MagickImage(fileInfo);
+                    image.Quality = 85;
+                    MagickGeometry geometry = new MagickGeometry();
+                    geometry.Width = width;
+                    geometry.Height = height;
+                    image.Resize(geometry);
+                    image.Strip();
+                    string name = fileInfo.Name.Split('.')[0];
+                    image.Write(outpath + "\\" + name + "." + suffix);//以流的方式写入目标路径
+                    image = null;
+                }
+                catch (Exception ex)
+                {
+                    error.Add(ex.Message);
+                }
+
+            }
+            if (image != null)
+            {
+                image.Dispose();//对象进行释放
+            }
+            if (error.Count > 0)
+            {
+                string lujing = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "错误信息.txt");
+                File.WriteAllLines(lujing, error);
+            }
         }
     }
 }

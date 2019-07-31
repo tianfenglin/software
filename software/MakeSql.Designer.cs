@@ -41,11 +41,11 @@
             this.txt_user = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.rtb_sql = new System.Windows.Forms.RichTextBox();
-            this.But_Select = new System.Windows.Forms.Button();
-            this.dgv_content = new System.Windows.Forms.DataGridView();
-            this.But_CreatSql = new System.Windows.Forms.Button();
-            this.txt_tablename = new System.Windows.Forms.TextBox();
             this.lab_tablename = new System.Windows.Forms.Label();
+            this.But_CreatSql = new System.Windows.Forms.Button();
+            this.But_Select = new System.Windows.Forms.Button();
+            this.txt_tablename = new System.Windows.Forms.TextBox();
+            this.dgv_content = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_content)).BeginInit();
@@ -184,27 +184,15 @@
             this.rtb_sql.TabIndex = 0;
             this.rtb_sql.Text = "";
             // 
-            // But_Select
+            // lab_tablename
             // 
-            this.But_Select.BackColor = System.Drawing.Color.Transparent;
-            this.But_Select.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.But_Select.Location = new System.Drawing.Point(76, 182);
-            this.But_Select.Name = "But_Select";
-            this.But_Select.Size = new System.Drawing.Size(130, 35);
-            this.But_Select.TabIndex = 1;
-            this.But_Select.Text = "查询数据库";
-            this.But_Select.UseVisualStyleBackColor = false;
-            this.But_Select.Click += new System.EventHandler(this.But_Select_Click);
-            // 
-            // dgv_content
-            // 
-            this.dgv_content.BackgroundColor = System.Drawing.Color.White;
-            this.dgv_content.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_content.Location = new System.Drawing.Point(2, 243);
-            this.dgv_content.Name = "dgv_content";
-            this.dgv_content.RowTemplate.Height = 23;
-            this.dgv_content.Size = new System.Drawing.Size(969, 270);
-            this.dgv_content.TabIndex = 8;
+            this.lab_tablename.AutoSize = true;
+            this.lab_tablename.BackColor = System.Drawing.Color.Transparent;
+            this.lab_tablename.Location = new System.Drawing.Point(6, 147);
+            this.lab_tablename.Name = "lab_tablename";
+            this.lab_tablename.Size = new System.Drawing.Size(77, 12);
+            this.lab_tablename.TabIndex = 0;
+            this.lab_tablename.Text = "表  名  称：";
             // 
             // But_CreatSql
             // 
@@ -218,6 +206,18 @@
             this.But_CreatSql.UseVisualStyleBackColor = false;
             this.But_CreatSql.Click += new System.EventHandler(this.But_CreatSql_Click);
             // 
+            // But_Select
+            // 
+            this.But_Select.BackColor = System.Drawing.Color.Transparent;
+            this.But_Select.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.But_Select.Location = new System.Drawing.Point(76, 182);
+            this.But_Select.Name = "But_Select";
+            this.But_Select.Size = new System.Drawing.Size(130, 35);
+            this.But_Select.TabIndex = 1;
+            this.But_Select.Text = "查询数据库";
+            this.But_Select.UseVisualStyleBackColor = false;
+            this.But_Select.Click += new System.EventHandler(this.But_Select_Click);
+            // 
             // txt_tablename
             // 
             this.txt_tablename.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -226,15 +226,15 @@
             this.txt_tablename.Size = new System.Drawing.Size(258, 29);
             this.txt_tablename.TabIndex = 2;
             // 
-            // lab_tablename
+            // dgv_content
             // 
-            this.lab_tablename.AutoSize = true;
-            this.lab_tablename.BackColor = System.Drawing.Color.Transparent;
-            this.lab_tablename.Location = new System.Drawing.Point(6, 147);
-            this.lab_tablename.Name = "lab_tablename";
-            this.lab_tablename.Size = new System.Drawing.Size(77, 12);
-            this.lab_tablename.TabIndex = 0;
-            this.lab_tablename.Text = "表  名  称：";
+            this.dgv_content.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_content.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_content.Location = new System.Drawing.Point(2, 243);
+            this.dgv_content.Name = "dgv_content";
+            this.dgv_content.RowTemplate.Height = 23;
+            this.dgv_content.Size = new System.Drawing.Size(969, 270);
+            this.dgv_content.TabIndex = 8;
             // 
             // MakeSql
             // 
@@ -245,6 +245,7 @@
             this.Controls.Add(this.dgv_content);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MakeSql";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MakeSql";

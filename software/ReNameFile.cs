@@ -44,5 +44,15 @@ namespace software
             fileHelper.ReNamePathFileSuffix(startpath, endpath, suffix);
             MessageBox.Show("导出成功", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void Btn_FirstPath_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Btn_EndPath_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

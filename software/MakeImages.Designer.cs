@@ -170,7 +170,9 @@
             this.Controls.Add(this.But_OneImage);
             this.Controls.Add(this.txt_filepath);
             this.Controls.Add(this.lab_filepath);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MakeImages";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "图片编辑";
             this.ResumeLayout(false);
             this.PerformLayout();

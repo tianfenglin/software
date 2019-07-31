@@ -412,7 +412,9 @@
             this.Controls.Add(this.dgv_content);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UpdateSql";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UpdateSql";
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);

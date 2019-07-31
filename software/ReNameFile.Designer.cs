@@ -84,6 +84,7 @@
             this.Btn_FirstPath.TabIndex = 3;
             this.Btn_FirstPath.Text = "选择文件夹";
             this.Btn_FirstPath.UseVisualStyleBackColor = false;
+            this.Btn_FirstPath.Click += new System.EventHandler(this.Btn_FirstPath_Click);
             // 
             // Btn_MoveFile
             // 
@@ -107,6 +108,7 @@
             this.Btn_EndPath.TabIndex = 5;
             this.Btn_EndPath.Text = "选择文件夹";
             this.Btn_EndPath.UseVisualStyleBackColor = false;
+            this.Btn_EndPath.Click += new System.EventHandler(this.Btn_EndPath_Click);
             // 
             // lab_suffix
             // 
@@ -140,7 +142,9 @@
             this.Controls.Add(this.Btn_FirstPath);
             this.Controls.Add(this.Btn_MoveFile);
             this.Controls.Add(this.Btn_EndPath);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ReNameFile";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "重命名文件";
             this.ResumeLayout(false);
             this.PerformLayout();

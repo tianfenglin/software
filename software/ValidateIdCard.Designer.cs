@@ -124,7 +124,9 @@
             this.Controls.Add(this.lab_filename);
             this.Controls.Add(this.lab_startpath);
             this.Controls.Add(this.Btn_StartPath);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ValidateIdCard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "验证身份证";
             this.ResumeLayout(false);
             this.PerformLayout();

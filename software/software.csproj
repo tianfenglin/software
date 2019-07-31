@@ -50,6 +50,9 @@
   <PropertyGroup>
     <StartupObject />
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>tian.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Awesomium.Core, Version=1.6.6.0, Culture=neutral, PublicKeyToken=e1a0d7c8071a5214" />
     <Reference Include="Awesomium.Windows.Forms, Version=1.6.6.0, Culture=neutral, PublicKeyToken=9bd24830fbe304a0, processorArchitecture=x86" />
@@ -117,6 +120,18 @@
     <Compile Include="BuildObject.Designer.cs">
       <DependentUpon>BuildObject.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChangeImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeImage.Designer.cs">
+      <DependentUpon>ChangeImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HandString.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HandString.Designer.cs">
+      <DependentUpon>HandString.cs</DependentUpon>
+    </Compile>
     <Compile Include="MakeExcel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +188,12 @@
     <Compile Include="UpdateSql.Designer.cs">
       <DependentUpon>UpdateSql.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdateSqlByExcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateSqlByExcel.Designer.cs">
+      <DependentUpon>UpdateSqlByExcel.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserPy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +211,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BuildObject.resx">
       <DependentUpon>BuildObject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeImage.resx">
+      <DependentUpon>ChangeImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HandString.resx">
+      <DependentUpon>HandString.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MakeExcel.resx">
       <DependentUpon>MakeExcel.cs</DependentUpon>
@@ -228,6 +255,9 @@
     <EmbeddedResource Include="UpdateSql.resx">
       <DependentUpon>UpdateSql.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UpdateSqlByExcel.resx">
+      <DependentUpon>UpdateSqlByExcel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserPy.resx">
       <DependentUpon>UserPy.cs</DependentUpon>
     </EmbeddedResource>
@@ -259,6 +289,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="tian.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

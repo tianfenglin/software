@@ -47,5 +47,59 @@ namespace software
             string value = inihelp.IniReadValue("excel", "replace");
             rtb_brief.Text = value;
         }
+
+        private void Btn_MoveFile_Click(object sender, EventArgs e)
+        {
+            MoveFile app = new MoveFile();
+            app.Show();
+        }
+
+        private void Btn_HandString_Click(object sender, EventArgs e)
+        {
+            HandString app = new HandString();
+            app.Show();
+        }
+
+        private void Btn_ChangeImage_Click(object sender, EventArgs e)
+        {
+            ChangeImage app = new ChangeImage();
+            app.Show();
+        }
+
+        private void Btn_BuildObject_Click(object sender, EventArgs e)
+        {
+            BuildObject app = new BuildObject();
+            app.Show();
+        }
+
+        private void Btn_UpdateSql_Click(object sender, EventArgs e)
+        {
+            UpdateSql app = new UpdateSql();
+            app.Show();
+        }
+
+        private void Btn_UpdateSqlByExcel_Click(object sender, EventArgs e)
+        {
+            UpdateSqlByExcel app = new UpdateSqlByExcel();
+            app.Show();
+        }
+
+        private void Btn_ValidateIdCard_Click(object sender, EventArgs e)
+        {
+            ValidateIdCard app = new ValidateIdCard();
+            app.Show();
+        }
+
+        private void Btn_TextToExcel_Click(object sender, EventArgs e)
+        {
+            TextToExcel app = new TextToExcel();
+            app.Show();
+        }
+
+        private void Btn_MakeImages_Click(object sender, EventArgs e)
+        {
+            MakeImages app = new MakeImages();
+            app.Show();
+        }
     }
 }

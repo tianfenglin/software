@@ -40,13 +40,13 @@
             this.txt_password = new System.Windows.Forms.TextBox();
             this.txt_user = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lab_exportpath = new System.Windows.Forms.Label();
             this.rtb_sql = new System.Windows.Forms.RichTextBox();
             this.But_CreatExcel = new System.Windows.Forms.Button();
             this.But_Select = new System.Windows.Forms.Button();
-            this.dgv_content = new System.Windows.Forms.DataGridView();
-            this.lab_exportpath = new System.Windows.Forms.Label();
-            this.But_exportpath = new System.Windows.Forms.Button();
             this.txt_exportpath = new System.Windows.Forms.TextBox();
+            this.dgv_content = new System.Windows.Forms.DataGridView();
+            this.But_exportpath = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_content)).BeginInit();
@@ -177,6 +177,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "查询语句";
             // 
+            // lab_exportpath
+            // 
+            this.lab_exportpath.AutoSize = true;
+            this.lab_exportpath.BackColor = System.Drawing.Color.Transparent;
+            this.lab_exportpath.Location = new System.Drawing.Point(6, 154);
+            this.lab_exportpath.Name = "lab_exportpath";
+            this.lab_exportpath.Size = new System.Drawing.Size(95, 12);
+            this.lab_exportpath.TabIndex = 17;
+            this.lab_exportpath.Text = "导出Excel路径：";
+            // 
             // rtb_sql
             // 
             this.rtb_sql.Location = new System.Drawing.Point(6, 16);
@@ -209,6 +219,13 @@
             this.But_Select.UseVisualStyleBackColor = false;
             this.But_Select.Click += new System.EventHandler(this.But_Select_Click);
             // 
+            // txt_exportpath
+            // 
+            this.txt_exportpath.Location = new System.Drawing.Point(107, 151);
+            this.txt_exportpath.Name = "txt_exportpath";
+            this.txt_exportpath.Size = new System.Drawing.Size(284, 21);
+            this.txt_exportpath.TabIndex = 18;
+            // 
             // dgv_content
             // 
             this.dgv_content.BackgroundColor = System.Drawing.Color.White;
@@ -218,16 +235,6 @@
             this.dgv_content.RowTemplate.Height = 23;
             this.dgv_content.Size = new System.Drawing.Size(950, 270);
             this.dgv_content.TabIndex = 9;
-            // 
-            // lab_exportpath
-            // 
-            this.lab_exportpath.AutoSize = true;
-            this.lab_exportpath.BackColor = System.Drawing.Color.Transparent;
-            this.lab_exportpath.Location = new System.Drawing.Point(6, 154);
-            this.lab_exportpath.Name = "lab_exportpath";
-            this.lab_exportpath.Size = new System.Drawing.Size(95, 12);
-            this.lab_exportpath.TabIndex = 17;
-            this.lab_exportpath.Text = "导出Excel路径：";
             // 
             // But_exportpath
             // 
@@ -241,13 +248,6 @@
             this.But_exportpath.UseVisualStyleBackColor = false;
             this.But_exportpath.Click += new System.EventHandler(this.But_exportpath_Click);
             // 
-            // txt_exportpath
-            // 
-            this.txt_exportpath.Location = new System.Drawing.Point(107, 151);
-            this.txt_exportpath.Name = "txt_exportpath";
-            this.txt_exportpath.Size = new System.Drawing.Size(284, 21);
-            this.txt_exportpath.TabIndex = 18;
-            // 
             // MakeExcel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -258,7 +258,9 @@
             this.Controls.Add(this.dgv_content);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MakeExcel";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MakeExcel";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
